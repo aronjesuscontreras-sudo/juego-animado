@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Juego Animado - IEST Huancayo</title>
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<header>
+  <img src="logo.png" alt="Logo IEST" class="logo-chico">
+  <h1>ATRAPA LOS ENGRANAJES</h1>
+</header>
+
+<main>
+  <div id="caja">
+    <canvas id="lienzo" width="600" height="440"></canvas>
+
+    <!-- pantalla de inicio -->
+    <div id="inicio" class="pantalla">
+      <img src="logo.png" alt="Logo IEST" class="logo-grande">
+      <h2>I.E.S.T. Andrés Avelino Cáceres Dorregaray</h2>
+      <p>Mueve el carrito con las flechas ← → (o con el mouse / el dedo)<br>
+         Atrapa los engranajes y los rayos, pero ¡cuidado con los cortocircuitos!</p>
+      <button id="btnJugar">JUGAR</button>
+    </div>
+
+    <!-- pantalla de game over -->
+    <div id="fin" class="pantalla oculto">
+      <h2>¡Se acabó!</h2>
+      <p id="textoFinal"></p>
+      <button id="btnOtra">Jugar otra vez</button>
+    </div>
+  </div>
+
+  <div id="marcador">
+    <span>Puntos: <b id="puntos">0</b></span>
+    <span>Vidas: <b id="vidas">3</b></span>
+    <span>Récord: <b id="record">0</b></span>
+  </div>
+</main>
+
+<footer>
+  <p>Juego Animado - Tarea de clase</p>
+  <p class="nombre">JESUS CONTRERAS David</p>
+</footer>
+
+<script src="juego.js"></script>
+</body>
+</html>
